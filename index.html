@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -660,7 +661,7 @@
                     <div class="info-icon">✉️</div>
                     <div>
                         <h4>Email</h4>
-                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1a9a4adadae81ada4afb2a3b8a0b3b8a0afefa2aeac">[email&#160;protected]</a><br><span>Quick reply guaranteed</span></p>
+                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d25282121220d2128233e2f342c3f342c23632e2220">[email&#160;protected]</a><br><span>Quick reply guaranteed</span></p>
                     </div>
                 </div>
                 <div class="info-block">
@@ -678,24 +679,24 @@
             </div>
 
             <!-- RIGHT: Form -->
-            <form class="contact-form anim-right d1" onsubmit="handleFormSubmit(event)">
+            <form class="contact-form anim-right d1" id="contact-form" onsubmit="handleFormSubmit(event)">
                 <div class="form-row">
                     <div class="form-group">
                         <label>Your Name</label>
-                        <input type="text" placeholder="Rahul Sharma" required />
+                        <input type="text" name="from_name" placeholder="Rahul Sharma" required />
                     </div>
                     <div class="form-group">
                         <label>Phone Number</label>
-                        <input type="tel" placeholder="+91 98765 43210" required />
+                        <input type="tel" name="phone" placeholder="+91 98765 43210" required />
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="email" placeholder="rahul@example.com" required />
+                    <input type="email" name="reply_to" placeholder="rahul@example.com" required />
                 </div>
                 <div class="form-group">
                     <label>Service Required</label>
-                    <select required>
+                    <select name="service" required>
                         <option value="" disabled selected>Select a service...</option>
                         <option>Wedding Photography</option>
                         <option>Pre-Wedding Shoot</option>
@@ -709,11 +710,11 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>Event Date</label>
-                        <input type="date" />
+                        <input type="date" name="event_date" />
                     </div>
                     <div class="form-group">
                         <label>Budget Range</label>
-                        <select>
+                        <select name="budget">
                             <option value="" disabled selected>Select budget...</option>
                             <option>Under ₹10,000</option>
                             <option>₹10,000 – ₹25,000</option>
@@ -724,7 +725,7 @@
                 </div>
                 <div class="form-group">
                     <label>Your Message</label>
-                    <textarea placeholder="Tell me about your event, location preferences, or any special requirements..." rows="4" required></textarea>
+                    <textarea name="message" placeholder="Tell me about your event, location preferences, or any special requirements..." rows="4" required></textarea>
                 </div>
                 <button type="submit" class="contact-submit-btn">
                     <span>Send Message</span>
@@ -910,6 +911,48 @@ function handleFormSubmit(e) {
         btn.querySelector('span').textContent = 'Send Message';
         e.target.reset();
     }, 1500);
+}
+</script>
+<script>
+// ===== EMAILJS INIT =====
+emailjs.init("6OVUZDjUUg6ayAft1");
+
+// ===== CONTACT FORM SUBMIT =====
+function handleFormSubmit(e) {
+    e.preventDefault();
+
+    const form = document.getElementById('contact-form');
+    const btn  = form.querySelector('.contact-submit-btn');
+    const successBox = document.getElementById('formSuccess');
+
+    // Loading state
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+    btn.querySelector('span').textContent = 'Sending...';
+    successBox.className = 'form-success';
+    successBox.textContent = '';
+
+    // Send email via EmailJS
+    emailjs.sendForm('service_d7l59yw', 'template_l5hfjv1', form)
+        .then(() => {
+            // ✅ SUCCESS
+            successBox.textContent = '✅ Message sent! I will reach out within 24 hours.';
+            successBox.style.color = '#4caf50';
+            successBox.classList.add('visible');
+            form.reset();
+        })
+        .catch((err) => {
+            // ❌ ERROR
+            successBox.textContent = '❌ Something went wrong. Please try again or contact directly.';
+            successBox.style.color = '#f44336';
+            successBox.classList.add('visible');
+            console.error('EmailJS error:', err);
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.style.opacity = '1';
+            btn.querySelector('span').textContent = 'Send Message';
+        });
 }
 </script>
 </body>
