@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-
+        <!------------------------------ HERO SECTION START -------------------------------->
   <section class="hero">
         <div class="hero-bg"></div>
         
         <nav>
             <div class="logo">📸 LENS</div>
             <ul class="nav-links">
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -56,7 +57,7 @@
             </svg>
         </div>
     </section>
-  </body>  
+    
 
 
          <!------------------------------ GALLERY SECTION START -------------------------------->
@@ -432,8 +433,182 @@
 
     <!-- <!=====Gallery section end=======> -->
 
+
+        <!------------------------------ ABOUT SECTION START -------------------------------->
+
+
+        <section id="about">
+    <div class="container">
+
+        <!-- Section Tag -->
+        <div class="sec-tag anim">
+            <div class="sec-tag-line"></div>
+            <span class="sec-tag-txt">About Me</span>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="about-grid">
+
+            <!-- LEFT: Image -->
+            <div class="about-img-col anim-left d1">
+                <div class="img-wrapper">
+                    <div class="main-img"></div>
+                </div>
+                <div class="mini-img"></div>
+                <div class="exp-badge">
+                    <span class="n">8</span>
+                    <span class="u">Years Exp.</span>
+                </div>
+            </div>
+
+            <!-- RIGHT: Content -->
+            <div class="about-txt-col">
+                <h2 class="about-h2 anim-right d1">
+                    The Eye Behind<br>the <em>Lens</em>
+                </h2>
+                <div class="h2-line anim-right d2"></div>
+
+                <p class="about-p anim-right d2">
+                    Hello, I'm <strong>Aryan Malik</strong> — a passionate visual storyteller with over 8 years of experience capturing the world through my lens. Based in Mumbai, I specialise in wedding, portrait, and fine-art photography.
+                </p>
+                <p class="about-p anim-right d3">
+                    For me, photography is more than technique — it's about <strong>feeling the moment</strong> and translating it into a timeless image. Every frame I shoot carries emotion, intention, and a piece of my soul.
+                </p>
+
+                <div class="about-quote anim-right d3">
+                    <p>"Light is not just illumination — it is the language I use to tell every story."</p>
+                </div>
+
+                <div class="skills-grid anim-right d4">
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Wedding Photography</span></div>
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Portrait & Fashion</span></div>
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Landscape & Travel</span></div>
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Studio Lighting</span></div>
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Photo Retouching</span></div>
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Commercial Shoots</span></div>
+                </div>
+
+                <div class="about-cta anim-right d5">
+                    <a href="#contact" class="btn-sq btn-sq-fill">Book a Session</a>
+                    <a href="#portfolio" class="btn-sq btn-sq-border">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar anim d5">
+            <div class="sbar-block">
+                <div class="sbar-num">500<span class="sbar-plus">+</span></div>
+                <span class="sbar-label">Happy Clients</span>
+            </div>
+            <div class="sbar-block">
+                <div class="sbar-num">1.2<span class="sbar-plus">K</span></div>
+                <span class="sbar-label">Projects Done</span>
+            </div>
+            <div class="sbar-block">
+                <div class="sbar-num">50<span class="sbar-plus">+</span></div>
+                <span class="sbar-label">Awards Won</span>
+            </div>
+            <div class="sbar-block">
+                <div class="sbar-num">8<span class="sbar-plus">+</span></div>
+                <span class="sbar-label">Years Experience</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<script>
+
+// ===== GALLERY FILTER =====
+const filterBtns = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const category = btn.getAttribute('data-category');
+        galleryItems.forEach(item => {
+            if (category === 'all' || item.getAttribute('data-category') === category) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                }, 10);
+            } else {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    item.style.display = 'none';
+                }, 400);
+            }
+        });
+    });
+});
+
+// ===== LIGHTBOX =====
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxTitle = document.getElementById('lightboxTitle');
+const lightboxDesc = document.getElementById('lightboxDesc');
+const lightboxClose = document.querySelector('.lightbox-close');
+
+galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const title = item.querySelector('h3');
+        const desc = item.querySelector('p');
+        if (!img) return;
+        lightboxImg.src = img.src;
+        lightboxTitle.textContent = title ? title.textContent : '';
+        lightboxDesc.textContent = desc ? desc.textContent : '';
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+if (lightboxClose) {
+    lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+}
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+const loadMoreBtn = document.querySelector('.load-more-btn');
+if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+        alert('Loading more photos...');
+    });
+}
+
+// ===== ABOUT SCROLL ANIMATIONS =====
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('show');
+    });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.anim, .anim-left, .anim-right').forEach(el => observer.observe(el));
+
+</script>
 </body>
 </html>
 
 
-</html>
