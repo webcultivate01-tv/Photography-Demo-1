@@ -15,7 +15,12 @@
         
         <nav>
             <div class="logo">📸 LENS</div>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#Gallery">Gallery</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -625,6 +630,92 @@
     </div>
 </section>
 
+<!------------------------------ REVIEWS SECTION START -------------------------------->
+
+<section id="reviews">
+    <div class="container">
+        <div class="sec-tag anim">
+            <div class="sec-tag-line"></div>
+            <span class="sec-tag-txt">Client Reviews</span>
+        </div>
+
+        <div class="reviews-heading anim">
+            <h2 class="reviews-h2">What Our Clients <em>Say</em></h2>
+            <p class="reviews-sub">Real experiences from couples and clients who trusted us with their special moments.</p>
+        </div>
+
+        <div class="review-slider-wrapper">
+            <div class="review-slider" id="reviewSlider">
+                
+                <div class="review-card active">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Absolutely stunning work! They captured every emotion of our wedding day perfectly. The photos are beyond our expectations and we'll treasure them forever."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">👰</div>
+                        <div>
+                            <h4>Priya & Rahul</h4>
+                            <span>Wedding Photography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The pre-wedding shoot was magical! They made us feel so comfortable and the locations were breathtaking. Highly recommend for any couple."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">💑</div>
+                        <div>
+                            <h4>Neha & Arjun</h4>
+                            <span>Pre-Wedding Shoot</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Professional, creative, and so patient with our kids! The family portraits turned out beautiful. Thank you for capturing our memories."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">👨‍👩‍👧‍👦</div>
+                        <div>
+                            <h4>Sharma Family</h4>
+                            <span>Lifestyle Portrait</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Our product photos look incredible! Sales increased by 40% after using these images. Worth every rupee. Highly professional service."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">📦</div>
+                        <div>
+                            <h4>Meera Boutique</h4>
+                            <span>Product Photography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Best decision for our engagement shoot! The photos are stunning and captured our love story beautifully. Can't wait for the wedding photography!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">💍</div>
+                        <div>
+                            <h4>Anjali & Vikram</h4>
+                            <span>Engagement Session</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </div>
+</section>
+
+
+
 
 <!------------------------------ TESTIMONIALS SECTION START -------------------------------->
 
@@ -893,22 +984,68 @@
     <span class="whatsapp-tooltip">Chat with us!</span>
 </a>
 
+
 <!-- FOOTER -->
 <footer class="site-footer">
     <div class="container">
-        <div class="footer-inner">
-            <div class="footer-logo">📸 LENS</div>
-            <p class="footer-tagline">Capturing life's beautiful moments — one frame at a time.</p>
-            <div class="footer-links">
-                <a href="#Gallery">Gallery</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
+        <div class="footer-grid">
+            
+            <!-- Column 1: Brand -->
+            <div class="footer-col">
+                <div class="footer-logo">📸 LENS</div>
+                <p class="footer-tagline">Crafting cinematic wedding films and timeless photography that capture your love story forever.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Facebook">👥</a>
+                    <a href="#" aria-label="YouTube">📺</a>
+                    <a href="#" aria-label="WhatsApp">💬</a>
+                </div>
             </div>
-            <p class="footer-copy">© 2025 Lens by Aryan Malik. All rights reserved.</p>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#hero">› Home</a></li>
+                    <li><a href="#about">› About Us</a></li>
+                    <li><a href="#services">› Services</a></li>
+                    <li><a href="#Gallery">› Gallery</a></li>
+                    <li><a href="#reviews">› Packages</a></li>
+                    <li><a href="#contact">› Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div class="footer-col">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">📸 Wedding Photography</a></li>
+                    <li><a href="#services">💛 Pre-Wedding Shoots</a></li>
+                    <li><a href="#services">🎥 Cinematic Films</a></li>
+                    <li><a href="#services">✨ Candid Photography</a></li>
+                    <li><a href="#services">🚁 Drone Photography</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Get In Touch -->
+            <div class="footer-col">
+                <h3>Get In Touch</h3>
+                <div class="footer-contact">
+                    <p>📞 +91 9960876119</p>
+                    <p>📧 info@shubhmilanfilms.com</p>
+                    <p>📍 Amravati, Maharashtra, India</p>
+                </div>
+                <a href="#contact" class="footer-cta-btn">Book Now</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 शुभमिलन Films. All rights reserved.</p>
         </div>
     </div>
 </footer>
+
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
@@ -1106,6 +1243,101 @@ function handleFormSubmit(e) {
             btn.querySelector('span').textContent = 'Send Message';
         });
 }
+
+
+// ═══════════════════════════════════════════════════════════════════════════
+// HAMBURGER MENU TOGGLE
+// ═══════════════════════════════════════════════════════════════════════════
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// REVIEW SLIDER - AUTO CHANGE EVERY 2 SECONDS
+// ═══════════════════════════════════════════════════════════════════════════
+
+const reviewCards = document.querySelectorAll('.review-card');
+const sliderDots = document.getElementById('sliderDots');
+let currentReview = 0;
+let reviewInterval;
+
+if (reviewCards.length > 0) {
+    // Create dots
+    reviewCards.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.className = 'dot' + (index === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goToReview(index));
+        sliderDots.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.slider-dots .dot');
+
+    function goToReview(index) {
+        reviewCards[currentReview].classList.remove('active');
+        dots[currentReview].classList.remove('active');
+        
+        currentReview = index;
+        
+        reviewCards[currentReview].classList.add('active');
+        dots[currentReview].classList.add('active');
+    }
+
+    function nextReview() {
+        const next = (currentReview + 1) % reviewCards.length;
+        goToReview(next);
+    }
+
+    // Auto-slide every 2 seconds
+    function startAutoSlide() {
+        reviewInterval = setInterval(nextReview, 2000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(reviewInterval);
+    }
+
+    // Start auto-slide
+    startAutoSlide();
+
+    // Pause on hover
+    const slider = document.querySelector('.review-slider-wrapper');
+    if (slider) {
+        slider.addEventListener('mouseenter', stopAutoSlide);
+        slider.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    // Manual dot click stops auto-slide temporarily
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            stopAutoSlide();
+            setTimeout(startAutoSlide, 5000); // Resume after 5s
+        });
+    });
+}
+
 </script>
 </body>
 </html>
