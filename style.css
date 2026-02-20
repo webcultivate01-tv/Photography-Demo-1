@@ -1871,8 +1871,10 @@
 
 .youtube-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .youtube-video {
@@ -1916,7 +1918,6 @@
     .youtube-grid { grid-template-columns: 1fr; }
     .videos-h2 { font-size: 2.2rem; }
 }
-
 /* =====================
    WHATSAPP FLOATING BUTTON
 ===================== */
@@ -2066,7 +2067,9 @@
         backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: flex-start;
-        padding: 80px 30px 30px;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 70px 25px 20px;
         transition: right 0.4s ease;
         border-left: 1px solid rgba(243, 156, 18, 0.2);
         z-index: 999;
@@ -2077,15 +2080,15 @@
     }
 
     .nav-links li {
-        margin: 15px 0;
+        margin: 0;
         width: 100%;
     }
 
     .nav-links a {
-        font-size: 1.2rem;
+        font-size: 1rem;
         display: block;
         padding: 10px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 }
 

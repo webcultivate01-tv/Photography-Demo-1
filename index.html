@@ -741,28 +741,18 @@
             </div>
 
             <div class="youtube-video anim d2">
-                <iframe loading="lazy" src="https://www.youtube.com/embed/SiPv5dlPq_I" title="Wedding Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h3>Pre-Wedding Highlights</h3>
-            </div>
-
-            <div class="youtube-video anim d3">
                 <iframe loading="lazy" src="https://www.youtube.com/embed/BJR6yvbefQ4" title="Wedding Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h3>Baby Shower Highlight</h3>
             </div>
 
-            <div class="youtube-video anim d4">
+            <div class="youtube-video anim d3">
                 <iframe loading="lazy" src="https://www.youtube.com/embed/ism1TaIlJJI" title="Wedding Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h3>Engagement Teaser</h3>
             </div>
 
-            <div class="youtube-video anim d5">
+            <div class="youtube-video anim d4">
                 <iframe loading="lazy" src="https://www.youtube.com/embed/AQZJ9WsXDeY" title="Wedding Video 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h3>Marathi Pre-Wedding</h3>
-            </div>
-
-            <div class="youtube-video anim d6">
-                <iframe loading="lazy" src="https://www.youtube.com/embed/S4V6HTGNa-g" title="Wedding Video 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h3>Naming Ceremony</h3>
             </div>
         </div>
     </div>
@@ -957,7 +947,7 @@
                     </li>
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        <span>info@shubhmilanfilms.com</span>
+                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="462f28202906352e33242e2b2f2a2728202f2a2b356825292b">[email&#160;protected]</a></span>
                     </li>
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -970,13 +960,13 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2025 LENS Films. All rights reserved.</p>
+            <p>© 2025 शुभमिलन Films. All rights reserved.</p>
         </div>
     </div>
 </footer>
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
 // ===== GALLERY SETUP =====
 const filterBtns = document.querySelectorAll('.filter-btn');
@@ -1114,24 +1104,6 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.anim, .anim-left, .anim-right').forEach(el => observer.observe(el));
 
-// ===== CONTACT FORM SUBMIT =====
-function handleFormSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.contact-submit-btn');
-    const success = document.getElementById('formSuccess');
-    btn.style.opacity = '0.7';
-    btn.style.pointerEvents = 'none';
-    btn.querySelector('span').textContent = 'Sending...';
-    setTimeout(() => {
-        success.classList.add('visible');
-        btn.style.opacity = '1';
-        btn.style.pointerEvents = 'auto';
-        btn.querySelector('span').textContent = 'Send Message';
-        e.target.reset();
-    }, 1500);
-}
-</script>
-<script>
 // ===== EMAILJS INIT =====
 emailjs.init("6OVUZDjUUg6ayAft1");
 
@@ -1263,11 +1235,11 @@ if (reviewCards.length > 0) {
     dots.forEach(dot => {
         dot.addEventListener('click', () => {
             stopAutoSlide();
-            setTimeout(startAutoSlide, 5000); // Resume after 5s
+            setTimeout(startAutoSlide, 5000);
         });
     });
 }
 
 </script>
 </body>
-</html> 
+</html>
