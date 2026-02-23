@@ -39,7 +39,6 @@
             background-position: center;
             background-repeat: no-repeat;
             z-index: 0;
-            animation: zoomIn 20s ease-in-out infinite alternate;
         }
 
         .hero-bg::before {
