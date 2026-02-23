@@ -94,7 +94,7 @@
 
             <div class="gallery-item" data-category="prewedding">
                 <span class="category-badge">Pre-Wedding</span>
-                <img loading="lazy" src="images/Pre-Wedding/jonathan-borba-VwBGK97upKk-unsplash.jpg" alt="Couple Portrait">
+                <img loading="lazy" src="images/Pre-Wedding/sunset.jpeg" alt="Couple Portrait">
                 <div class="gallery-overlay">
                     <h3>Sunset Romance</h3>
                     <p>Beautiful golden hour pre-wedding moments</p>
@@ -103,7 +103,7 @@
 
             <div class="gallery-item" data-category="prewedding">
                 <span class="category-badge">Pre-Wedding</span>
-                <img loading="lazy" src="images/Pre-Wedding/jonathan-borba-n-A894UXsj8-unsplash.jpg" alt="Pre Wedding Photography">
+                <img loading="lazy" src="images/Pre-Wedding/image2.jpeg" alt="Pre Wedding Photography">
                 <div class="gallery-overlay">
                     <h3>Nature & Love</h3>
                     <p>Scenic outdoor pre-wedding photography session</p>
@@ -112,7 +112,7 @@
 
             <div class="gallery-item" data-category="prewedding">
                 <span class="category-badge">Pre-Wedding</span>
-                <img loading="lazy" src="images/Pre-Wedding/sonu-meghwan-L-XlAreVMFA-unsplash.jpg" alt="Romantic Couple">
+                <img loading="lazy" src="images/Pre-Wedding/image3.jpeg" alt="Romantic Couple">
                 <div class="gallery-overlay">
                     <h3>Intimate Moments</h3>
                     <p>Close-up pre-wedding couple photography</p>
@@ -121,7 +121,7 @@
 
             <div class="gallery-item" data-category="prewedding">
                 <span class="category-badge">Pre-Wedding</span>
-                <img loading="lazy" src="images/Pre-Wedding/sonu-meghwan-uGLgY4hjvYk-unsplash.jpg" alt="Romantic Couple">
+                <img loading="lazy" src="images/Pre-Wedding/image4.jpeg" alt="Romantic Couple">
                 <div class="gallery-overlay">
                     <h3>Forever Begins Here</h3>
                     <p>Beautifuk moments before the big "I Do".</p>
@@ -130,7 +130,7 @@
 
             <div class="gallery-item" data-category="prewedding">
                 <span class="category-badge">Pre-Wedding</span>
-                <img loading="lazy" src="images/Pre-Wedding/sourav-dalal-jb0BSzyOoIU-unsplash.jpg" alt="Romantic Couple">
+                <img loading="lazy" src="images/Pre-Wedding/image6.jpeg" alt="Romantic Couple">
                 <div class="gallery-overlay">
                     <h3>Golden Hour Romance</h3>
                     <p>Unfiltered emotions, real smiles, pure connections</p>
@@ -955,7 +955,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2025 शुभमिलन Films. All rights reserved.</p>
+            <p>© 2025 LENS Films. All rights reserved.</p>
         </div>
     </div>
 </footer>
@@ -967,24 +967,27 @@
 const filterBtns = document.querySelectorAll('.filter-btn');
 const allGalleryItems = Array.from(document.querySelectorAll('.gallery-item'));
 const viewGalleryBtn = document.getElementById('viewGalleryBtn');
-let showAll = false;
+const ITEMS_PER_PAGE = 6;
 let currentCategory = 'all';
 let visibleItems = [];
+let shownCount = 0;
 let currentLightboxIndex = 0;
 
 function applyVisibility() {
+    // Filter items by category
     visibleItems = allGalleryItems.filter(item =>
         currentCategory === 'all' || item.getAttribute('data-category') === currentCategory
     );
 
+    // Hide all first
     allGalleryItems.forEach(item => {
         item.style.display = 'none';
         item.style.opacity = '0';
         item.style.transform = 'scale(0.8)';
     });
 
-    const toShow = showAll ? visibleItems : visibleItems.slice(0, 6);
-
+    // Show only up to shownCount
+    const toShow = visibleItems.slice(0, shownCount);
     toShow.forEach((item, i) => {
         item.style.display = 'block';
         setTimeout(() => {
@@ -993,15 +996,25 @@ function applyVisibility() {
         }, i * 50);
     });
 
-    if (visibleItems.length <= 6) {
-        viewGalleryBtn.style.display = 'none';
+    // Update button
+    const remaining = visibleItems.length - shownCount;
+    if (remaining <= 0) {
+        viewGalleryBtn.style.display = shownCount > ITEMS_PER_PAGE ? 'inline-block' : 'none';
+        viewGalleryBtn.textContent = 'Show Less';
+        viewGalleryBtn.dataset.mode = 'less';
     } else {
         viewGalleryBtn.style.display = 'inline-block';
-        viewGalleryBtn.textContent = showAll ? 'Show Less' : 'View Full Gallery (' + visibleItems.length + ' Photos)';
+        viewGalleryBtn.textContent = 'View More (' + remaining + ' Photos)';
+        viewGalleryBtn.dataset.mode = 'more';
     }
 }
 
-applyVisibility();
+function resetGallery() {
+    shownCount = ITEMS_PER_PAGE;
+    applyVisibility();
+}
+
+resetGallery();
 
 // ===== FILTER BUTTONS =====
 filterBtns.forEach(btn => {
@@ -1009,17 +1022,21 @@ filterBtns.forEach(btn => {
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         currentCategory = btn.getAttribute('data-category');
-        showAll = false;
-        applyVisibility();
+        resetGallery();
     });
 });
 
-// ===== VIEW GALLERY BUTTON =====
+// ===== VIEW MORE / SHOW LESS BUTTON =====
 viewGalleryBtn.addEventListener('click', () => {
-    showAll = !showAll;
-    applyVisibility();
-    if (!showAll) {
+    if (viewGalleryBtn.dataset.mode === 'less') {
+        // Show Less - go back to first 6
+        shownCount = ITEMS_PER_PAGE;
+        applyVisibility();
         document.getElementById('Gallery').scrollIntoView({ behavior: 'smooth' });
+    } else {
+        // Load 6 more
+        shownCount += ITEMS_PER_PAGE;
+        applyVisibility();
     }
 });
 
