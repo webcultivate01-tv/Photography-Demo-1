@@ -1159,6 +1159,26 @@ function handleFormSubmit(e) {
 
 
 // ═══════════════════════════════════════════════════════════════════════════
+// HERO STATS COUNTER ANIMATION
+// ═══════════════════════════════════════════════════════════════════════════
+
+const statNumbers = document.querySelectorAll('.stat-number');
+statNumbers.forEach(stat => {
+    const target = parseInt(stat.textContent);
+    let current = 0;
+    const increment = target / 100;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            stat.textContent = target + '+';
+            clearInterval(timer);
+        } else {
+            stat.textContent = Math.floor(current);
+        }
+    }, 20);
+});
+
+// ═══════════════════════════════════════════════════════════════════════════
 // HAMBURGER MENU TOGGLE
 // ═══════════════════════════════════════════════════════════════════════════
 
