@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <title>PhotoGraphy Website Demo</title>
+</head>
+<body>
+        <!------------------------------ HERO SECTION START -------------------------------->
+  <section class="hero">
+        <div class="hero-bg"></div>
+        
+        <nav>
+            <div class="logo">📸 LENS</div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Capturing Life's Beautiful Moments</h1>
+            <p class="subtitle">Professional photography that tells your story through stunning visuals and authentic emotions</p>
+            <div class="cta-buttons">
+                <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                <a href="#contact" class="btn btn-secondary">Book a Session</a>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Projects Done</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Awards Won</div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+    
+
+
+         <!------------------------------ GALLERY SECTION START -------------------------------->
+
+
+  <section class="gallery-section" id="Gallery">
+        <div class="gallery-header">
+            <h2>Our Photography Gallery</h2>
+            <p>Discover our diverse portfolio showcasing weddings, lifestyle moments, professional products, and stunning fashion photography</p>
+        </div>
+
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="prewedding">Pre-Wedding</button>
+            <button class="filter-btn" data-category="wedding">Wedding</button>
+            <button class="filter-btn" data-category="engagement">Engagement</button>
+            <button class="filter-btn" data-category="lifestyle">Lifestyle</button>
+            <button class="filter-btn" data-category="product">Product</button>
+            <button class="filter-btn" data-category="model">Model</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            
+            <!-- PRE-WEDDING SECTION -->
+            <div class="gallery-item" data-category="prewedding">
+                <span class="category-badge">Pre-Wedding</span>
+                <img loading="lazy" src="images/Pre-Wedding/image1.jpeg" alt="Pre-Wedding Shoot">
+                <div class="gallery-overlay">
+                    <h3>Romantic Pre-Wedding</h3>
+                    <p>Capturing love before the big day - outdoor couple photoshoot</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="prewedding">
+                <span class="category-badge">Pre-Wedding</span>
+                <img loading="lazy" src="images/Pre-Wedding/sunset.jpeg" alt="Couple Portrait">
+                <div class="gallery-overlay">
+                    <h3>Sunset Romance</h3>
+                    <p>Beautiful golden hour pre-wedding moments</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="prewedding">
+                <span class="category-badge">Pre-Wedding</span>
+                <img loading="lazy" src="images/Pre-Wedding/image2.jpeg" alt="Pre Wedding Photography">
+                <div class="gallery-overlay">
+                    <h3>Nature & Love</h3>
+                    <p>Scenic outdoor pre-wedding photography session</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="prewedding">
+                <span class="category-badge">Pre-Wedding</span>
+                <img loading="lazy" src="images/Pre-Wedding/image3.jpeg" alt="Romantic Couple">
+                <div class="gallery-overlay">
+                    <h3>Intimate Moments</h3>
+                    <p>Close-up pre-wedding couple photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="prewedding">
+                <span class="category-badge">Pre-Wedding</span>
+                <img loading="lazy" src="images/Pre-Wedding/image4.jpeg" alt="Romantic Couple">
+                <div class="gallery-overlay">
+                    <h3>Forever Begins Here</h3>
+                    <p>Beautifuk moments before the big "I Do".</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="prewedding">
+                <span class="category-badge">Pre-Wedding</span>
+                <img loading="lazy" src="images/Pre-Wedding/image6.jpeg" alt="Romantic Couple">
+                <div class="gallery-overlay">
+                    <h3>Golden Hour Romance</h3>
+                    <p>Unfiltered emotions, real smiles, pure connections</p>
+                </div>
+            </div>
+
+
+            <!-- WEDDING SECTION -->
+            <div class="gallery-item" data-category="wedding">
+                <span class="category-badge">Wedding</span>
+                <img loading="lazy" src="images/Wedding/image3.jpeg" alt="Wedding Ceremony">
+                <div class="gallery-overlay">
+                    <h3>Traditional Wedding</h3>
+                    <p>Capturing sacred wedding ceremonies and rituals</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="wedding">
+                <span class="category-badge">Wedding</span>
+                <img loading="lazy" src="images/Wedding/image6.jpeg" alt="Bride and Groom">
+                <div class="gallery-overlay">
+                    <h3>The Perfect Day</h3>
+                    <p>Bride and groom portrait photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="wedding">
+                <span class="category-badge">Wedding</span>
+                <img loading="lazy" src="images/Wedding/image1.jpeg" alt="Wedding Celebration">
+                <div class="gallery-overlay">
+                    <h3>Wedding Festivities</h3>
+                    <p>Joyful celebration and dancing moments</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="wedding">
+                <span class="category-badge">Wedding</span>
+                <img loading="lazy" src="images/Wedding/image2.jpeg" alt="Indian Wedding">
+                <div class="gallery-overlay">
+                    <h3>Cultural Wedding</h3>
+                    <p>Traditional Indian wedding photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="wedding">
+                <span class="category-badge">Wedding</span>
+                <img loading="lazy" src="images/Wedding/image4.jpeg" alt="Wedding Celebration">
+                <div class="gallery-overlay">
+                    <h3>Sacred Vows</h3>
+                    <p>Promises sealed with love and tradition</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="wedding">
+                <span class="category-badge">Wedding</span>
+                <img loading="lazy" src="images/Wedding/image7.jpeg" alt="Indian Wedding">
+                <div class="gallery-overlay">
+                    <h3>Happily Ever After</h3>
+                    <p>The beginning of a beautiful forever</p>
+                </div>
+            </div>
+
+            <!-- ENGAGEMENT SECTION -->
+            <div class="gallery-item" data-category="engagement">
+                <span class="category-badge">Engagement</span>
+                <img loading="lazy" src="images/Engagement/ring2.jpeg" alt="Engagement Ring">
+                <div class="gallery-overlay">
+                    <h3>The Proposal</h3>
+                    <p>Beautiful engagement ring photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="engagement">
+                <span class="category-badge">Engagement</span>
+                <img loading="lazy" src="images/Engagement/enimage1.jpeg" alt="Couple Engagement">
+                <div class="gallery-overlay">
+                    <h3>Forever Begins</h3>
+                    <p>Engagement couple portrait session</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="engagement">
+                <span class="category-badge">Engagement</span>
+                <img loading="lazy" src="images/Engagement/ring.jpeg" alt="Ring Close-up">
+                <div class="gallery-overlay">
+                    <h3>Ring Details</h3>
+                    <p>Macro engagement ring photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="engagement">
+                <span class="category-badge">Engagement</span>
+                <img loading="lazy" src="images/Engagement/enimage2.jpeg" alt="Engagement Photoshoot">
+                <div class="gallery-overlay">
+                    <h3>Celebration</h3>
+                    <p>Happy engagement celebration moments</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="engagement">
+                <span class="category-badge">Engagement</span>
+                <img loading="lazy" src="images/Engagement/enimage3.jpeg" alt="Ring Close-up">
+                <div class="gallery-overlay">
+                    <h3>Forever Starts Today</h3>
+                    <p>Celebrating the first step towards forever</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="engagement">
+                <span class="category-badge">Engagement</span>
+                <img loading="lazy" src="images/Engagement/enimage4.jpeg" alt="Engagement Photoshoot">
+                <div class="gallery-overlay">
+                    <h3>Engaged & Enchanted</h3>
+                    <p>a journey of the officially begins</p>
+                </div>
+            </div>
+
+            <!-- LIFESTYLE SECTION -->
+            <div class="gallery-item" data-category="lifestyle">
+                <span class="category-badge">Lifestyle</span>
+                <img loading="lazy" src="images/Lifestyle/image1.jpeg" alt="Lifestyle Portrait">
+                <div class="gallery-overlay">
+                    <h3>Urban Lifestyle</h3>
+                    <p>Modern city lifestyle photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="lifestyle">
+                <span class="category-badge">Lifestyle</span>
+                <img loading="lazy" src="images/Lifestyle/image2.jpeg" alt="Outdoor Lifestyle">
+                <div class="gallery-overlay">
+                    <h3>Nature Walk</h3>
+                    <p>Outdoor lifestyle portrait photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="lifestyle">
+                <span class="category-badge">Lifestyle</span>
+                <img loading="lazy" src="images/Lifestyle/image3.jpeg" alt="Lifestyle Shoot">
+                <div class="gallery-overlay">
+                    <h3>Daily Moments</h3>
+                    <p>Capturing authentic lifestyle moments</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="lifestyle">
+                <span class="category-badge">Lifestyle</span>
+                <img loading="lazy" src="images/Lifestyle/image4.jpeg" alt="Family Lifestyle">
+                <div class="gallery-overlay">
+                    <h3>Family Time</h3>
+                    <p>Heartwarming family lifestyle photography</p>
+                </div>
+            </div>
+
+               <div class="gallery-item" data-category="lifestyle">
+                <span class="category-badge">Lifestyle</span>
+                <img loading="lazy" src="images/Lifestyle/image5.jpeg" alt="Lifestyle Portrait">
+                <div class="gallery-overlay">
+                    <h3>Bold & Beautiful</h3>
+                    <p> Where style meets attitude.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="lifestyle">
+                <span class="category-badge">Lifestyle</span>
+                <img loading="lazy" src="images/Lifestyle/image6.jpeg" alt="Outdoor Lifestyle">
+                <div class="gallery-overlay">
+                    <h3>The Glam Edit</h3>
+                    <p>Luxury, grace, and spotlight moments photography</p>
+                </div>
+            </div>
+
+            <!-- PRODUCT SECTION -->
+            <div class="gallery-item" data-category="product">
+                <span class="category-badge">Product</span>
+                <img loading="lazy" src="images/Product/image1.jpeg" alt="Product Photography">
+                <div class="gallery-overlay">
+                    <h3>Luxury Essentials</h3>
+                    <p>Crafted to elevate your everyday routine</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="product">
+                <span class="category-badge">Product</span>
+                <img loading="lazy" src="images/Product/image6.jpeg" alt="Watch Photography">
+                <div class="gallery-overlay">
+                    <h3>Refined Living</h3>
+                    <p>Designed to stand out, built to last</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="product">
+                <span class="category-badge">Product</span>
+                <img loading="lazy" src="images/Product/image3.jpeg" alt="Product Photography">
+                <div class="gallery-overlay">
+                    <h3>Modern Classics</h3>
+                    <p>Professional product photography studio shots</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="product">
+                <span class="category-badge">Product</span>
+                <img loading="lazy" src="images/Product/image2.jpeg" alt="Watch Photography">
+                <div class="gallery-overlay">
+                    <h3>Luxury Watch</h3>
+                    <p>High-end product photography with lighting</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="product">
+                <span class="category-badge">Product</span>
+                <img loading="lazy" src="images/Product/image5.jpeg" alt="Fashion Product">
+                <div class="gallery-overlay">
+                    <h3>Fashion Accessories</h3>
+                    <p>Stylish product photography for brands</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="product">
+                <span class="category-badge">Product</span>
+                <img loading="lazy" src="images/Product/image4.jpeg" alt="Tech Product">
+                <div class="gallery-overlay">
+                    <h3>Technology Products</h3>
+                    <p>Clean and modern tech product photography</p>
+                </div>
+            </div>
+            
+
+            <!-- MODEL SECTION -->
+            <div class="gallery-item" data-category="model">
+                <span class="category-badge">Model</span>
+                <img loading="lazy" src="images/Model/image1.jpeg" alt="Fashion Model">
+                <div class="gallery-overlay">
+                    <h3>Fashion Editorial</h3>
+                    <p>Professional fashion model photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="model">
+                <span class="category-badge">Model</span>
+                <img loading="lazy" src="images/Model/image2.jpeg" alt="Studio Model">
+                <div class="gallery-overlay">
+                    <h3>Bold & Beautiful</h3>
+                    <p>High fashion studio model photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="model">
+                <span class="category-badge">Model</span>
+                <img loading="lazy" src="images/Model/image3.jpeg" alt="Fashion Model">
+                <div class="gallery-overlay">
+                    <h3>The Glam Edit</h3>
+                    <p>Professional fashion model photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="model">
+                <span class="category-badge">Model</span>
+                <img loading="lazy" src="images/Model/image4.jpeg" alt="Studio Model">
+                <div class="gallery-overlay">
+                    <h3>Studio Session</h3>
+                    <p>High fashion studio model photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="model">
+                <span class="category-badge">Model</span>
+                <img loading="lazy" src="images/Model/image5.jpeg" alt="Portrait Model">
+                <div class="gallery-overlay">
+                    <h3>Model Portfolio</h3>
+                    <p>Professional model portfolio photography</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="model">
+                <span class="category-badge">Model</span>
+                <img loading="lazy" src="images/Model/image6.jpeg" alt="Fashion Photography">
+                <div class="gallery-overlay">
+                    <h3>Runway Ready</h3>
+                    <p>Fashion week model photography</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="load-more">
+            <button class="load-more-btn" id="viewGalleryBtn">View Full Gallery</button>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <button class="lightbox-prev" id="lightboxPrev">&#10094;</button>
+            <button class="lightbox-next" id="lightboxNext">&#10095;</button>
+            <img loading="lazy" src="" alt="Gallery Image" id="lightboxImg">
+            <div class="lightbox-info" id="lightboxInfo">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+                <span id="lightboxCounter" class="lightbox-counter"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- <!=====Gallery section end=======> -->
+
+
+        <!------------------------------ ABOUT SECTION START -------------------------------->
+
+
+        <section id="about">
+    <div class="container">
+
+        <!-- Section Tag -->
+        <div class="sec-tag anim">
+            <div class="sec-tag-line"></div>
+            <span class="sec-tag-txt">About Me</span>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="about-grid">
+
+            <!-- LEFT: Image -->
+            <div class="about-img-col anim-left d1">
+                <div class="img-wrapper">
+                    <div class="main-img"></div>
+                </div>
+                <div class="mini-img"></div>
+                <div class="exp-badge">
+                    <span class="n">8</span>
+                    <span class="u">Years Exp.</span>
+                </div>
+            </div>
+
+            <!-- RIGHT: Content -->
+            <div class="about-txt-col">
+                <h2 class="about-h2 anim-right d1">
+                    The Eye Behind<br>the <em>Lens</em>
+                </h2>
+                <div class="h2-line anim-right d2"></div>
+
+                <p class="about-p anim-right d2">
+                    Hello, I'm <strong>Aryan Malik</strong> — a passionate visual storyteller with over 8 years of experience capturing the world through my lens. Based in Mumbai, I specialise in wedding, portrait, and fine-art photography.
+                </p>
+                <p class="about-p anim-right d3">
+                    For me, photography is more than technique — it's about <strong>feeling the moment</strong> and translating it into a timeless image. Every frame I shoot carries emotion, intention, and a piece of my soul.
+                </p>
+
+                <div class="about-quote anim-right d3">
+                    <p>"Light is not just illumination — it is the language I use to tell every story."</p>
+                </div>
+
+                <div class="skills-grid anim-right d4">
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Wedding Photography</span></div>
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Portrait & Fashion</span></div>
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Landscape & Travel</span></div>
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Studio Lighting</span></div>
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Photo Retouching</span></div>
+                    <div class="skill-row"><div class="sk-dot"></div><span class="sk-txt">Commercial Shoots</span></div>
+                </div>
+
+                <div class="about-cta anim-right d5">
+                    <a href="#contact" class="btn-sq btn-sq-fill">Book a Session</a>
+                    <a href="#portfolio" class="btn-sq btn-sq-border">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar anim d5">
+            <div class="sbar-block">
+                <div class="sbar-num">500<span class="sbar-plus">+</span></div>
+                <span class="sbar-label">Happy Clients</span>
+            </div>
+            <div class="sbar-block">
+                <div class="sbar-num">1.2<span class="sbar-plus">K</span></div>
+                <span class="sbar-label">Projects Done</span>
+            </div>
+            <div class="sbar-block">
+                <div class="sbar-num">50<span class="sbar-plus">+</span></div>
+                <span class="sbar-label">Awards Won</span>
+            </div>
+            <div class="sbar-block">
+                <div class="sbar-num">8<span class="sbar-plus">+</span></div>
+                <span class="sbar-label">Years Experience</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!------------------------------ SERVICES SECTION START -------------------------------->
+
+<section id="services">
+    <div class="container">
+        <div class="sec-tag anim">
+            <div class="sec-tag-line"></div>
+            <span class="sec-tag-txt">What I Offer</span>
+        </div>
+
+        <div class="services-heading anim">
+            <h2 class="services-h2">Photography <em>Services</em></h2>
+            <p class="services-sub">Every session is crafted with passion, precision, and a deep commitment to capturing your story beautifully.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card anim d1">
+                <div class="service-icon">💍</div>
+                <h3>Wedding Photography</h3>
+                <p>Full-day wedding coverage capturing every sacred ritual, candid emotion, and timeless portrait of your most special day.</p>
+                <ul class="service-list">
+                    <li>8–12 hours coverage</li>
+                    <li>500+ edited photos</li>
+                    <li>Online gallery</li>
+                    <li>Print-ready files</li>
+                </ul>
+                <div class="service-price">Starting ₹35,000</div>
+                <a href="#contact" class="service-btn">Book Now</a>
+            </div>
+
+            <div class="service-card anim d2 featured">
+                <div class="featured-badge">Most Popular</div>
+                <div class="service-icon">💑</div>
+                <h3>Pre-Wedding Shoot</h3>
+                <p>Romantic, cinematic pre-wedding sessions at your favourite locations — tell your love story before the big day.</p>
+                <ul class="service-list">
+                    <li>4–6 hours session</li>
+                    <li>2 outfit changes</li>
+                    <li>300+ edited photos</li>
+                    <li>Location scouting</li>
+                </ul>
+                <div class="service-price">Starting ₹18,000</div>
+                <a href="#contact" class="service-btn">Book Now</a>
+            </div>
+
+            <div class="service-card anim d3">
+                <div class="service-icon">👗</div>
+                <h3>Fashion & Model</h3>
+                <p>High-fashion editorial shoots and portfolio photography designed to make models and brands look extraordinary.</p>
+                <ul class="service-list">
+                    <li>Studio + outdoor options</li>
+                    <li>Professional lighting</li>
+                    <li>200+ edited shots</li>
+                    <li>Social media ready</li>
+                </ul>
+                <div class="service-price">Starting ₹12,000</div>
+                <a href="#contact" class="service-btn">Book Now</a>
+            </div>
+
+            <div class="service-card anim d2">
+                <div class="service-icon">📦</div>
+                <h3>Product Photography</h3>
+                <p>Clean, compelling product images that drive sales — from cosmetics to luxury goods to tech products.</p>
+                <ul class="service-list">
+                    <li>Studio setup included</li>
+                    <li>White/dark backgrounds</li>
+                    <li>Lifestyle shots available</li>
+                    <li>E-commerce optimized</li>
+                </ul>
+                <div class="service-price">Starting ₹8,000</div>
+                <a href="#contact" class="service-btn">Book Now</a>
+            </div>
+
+            <div class="service-card anim d3">
+                <div class="service-icon">💎</div>
+                <h3>Engagement Session</h3>
+                <p>Celebrate your engagement with intimate and joyful couple portraits that beautifully capture the beginning of forever.</p>
+                <ul class="service-list">
+                    <li>2–3 hours session</li>
+                    <li>150+ edited photos</li>
+                    <li>Ring detail shots</li>
+                    <li>Same-day previews</li>
+                </ul>
+                <div class="service-price">Starting ₹10,000</div>
+                <a href="#contact" class="service-btn">Book Now</a>
+            </div>
+
+            <div class="service-card anim d4">
+                <div class="service-icon">🌿</div>
+                <h3>Lifestyle Portrait</h3>
+                <p>Authentic, natural lifestyle portraits for individuals, families, and professionals — no stiff poses, just real moments.</p>
+                <ul class="service-list">
+                    <li>2 hours session</li>
+                    <li>100+ edited photos</li>
+                    <li>Indoor/outdoor</li>
+                    <li>Quick delivery</li>
+                </ul>
+                <div class="service-price">Starting ₹6,000</div>
+                <a href="#contact" class="service-btn">Book Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!------------------------------ REVIEWS SECTION START -------------------------------->
+
+<section id="reviews">
+    <div class="container">
+        <div class="sec-tag anim">
+            <div class="sec-tag-line"></div>
+            <span class="sec-tag-txt">Client Reviews</span>
+        </div>
+
+        <div class="reviews-heading anim">
+            <h2 class="reviews-h2">What Our Clients <em>Say</em></h2>
+            <p class="reviews-sub">Real experiences from couples and clients who trusted us with their special moments.</p>
+        </div>
+
+        <div class="review-slider-wrapper">
+            <div class="review-slider" id="reviewSlider">
+                
+                <div class="review-card active">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Absolutely stunning work! They captured every emotion of our wedding day perfectly. The photos are beyond our expectations and we'll treasure them forever."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">👰</div>
+                        <div>
+                            <h4>Priya & Rahul</h4>
+                            <span>Wedding Photography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The pre-wedding shoot was magical! They made us feel so comfortable and the locations were breathtaking. Highly recommend for any couple."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">💑</div>
+                        <div>
+                            <h4>Neha & Arjun</h4>
+                            <span>Pre-Wedding Shoot</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Professional, creative, and so patient with our kids! The family portraits turned out beautiful. Thank you for capturing our memories."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">👨‍👩‍👧‍👦</div>
+                        <div>
+                            <h4>Sharma Family</h4>
+                            <span>Lifestyle Portrait</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Our product photos look incredible! Sales increased by 40% after using these images. Worth every rupee. Highly professional service."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">📦</div>
+                        <div>
+                            <h4>Meera Boutique</h4>
+                            <span>Product Photography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Best decision for our engagement shoot! The photos are stunning and captured our love story beautifully. Can't wait for the wedding photography!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">💍</div>
+                        <div>
+                            <h4>Anjali & Vikram</h4>
+                            <span>Engagement Session</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!------------------------------ YOUTUBE VIDEO SECTION START -------------------------------->
+
+<section id="youtube-videos">
+    <div class="container">
+        <div class="sec-tag anim">
+            <div class="sec-tag-line"></div>
+            <span class="sec-tag-txt">Our Work</span>
+        </div>
+
+        <div class="videos-heading anim">
+            <h2 class="videos-h2">Watch Our <em>Stories</em></h2>
+            <p class="videos-sub">Explore our cinematic wedding films, teasers, and highlights that bring memories to life.</p>
+        </div>
+
+        <div class="youtube-grid">
+            <div class="youtube-video anim d1">
+                <iframe loading="lazy" src="https://www.youtube.com/embed/DaS1Z7Al0-g" title="Wedding Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Best Wedding Teaser</h3>
+            </div>
+
+            <div class="youtube-video anim d2">
+                <iframe loading="lazy" src="https://www.youtube.com/embed/BJR6yvbefQ4" title="Wedding Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Baby Shower Highlight</h3>
+            </div>
+
+            <div class="youtube-video anim d3">
+                <iframe loading="lazy" src="https://www.youtube.com/embed/ism1TaIlJJI" title="Wedding Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Engagement Teaser</h3>
+            </div>
+
+            <div class="youtube-video anim d4">
+                <iframe loading="lazy" src="https://www.youtube.com/embed/AQZJ9WsXDeY" title="Wedding Video 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Marathi Pre-Wedding</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!------------------------------ CONTACT SECTION START -------------------------------->
+
+<section id="contact">
+    <div class="container">
+        <div class="sec-tag anim">
+            <div class="sec-tag-line"></div>
+            <span class="sec-tag-txt">Get In Touch</span>
+        </div>
+
+        <div class="contact-heading anim">
+            <h2 class="contact-h2">Let's Create Something <em>Beautiful</em></h2>
+            <p class="contact-sub">Ready to capture your story? Fill in your details and I'll get back to you within 24 hours.</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <!-- LEFT: Info -->
+            <div class="contact-info anim-left d1">
+                <div class="info-block">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Mumbai, Maharashtra, India<br><span>Available for destination shoots</span></p>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 98765 43210<br><span>Mon–Sat, 9am – 7pm</span></p>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="info-icon">✉️</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d25282121220d2128233e2f342c3f342c23632e2220">[email&#160;protected]</a><br><span>Quick reply guaranteed</span></p>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="info-icon">📸</div>
+                    <div>
+                        <h4>Instagram</h4>
+                        <p>@lensbyaryan<br><span>Follow for behind-the-scenes</span></p>
+                    </div>
+                </div>
+
+                <div class="contact-availability">
+                    <div class="avail-dot"></div>
+                    <span>Currently accepting bookings for 2025–2026</span>
+                </div>
+            </div>
+
+            <!-- RIGHT: Form -->
+            <form class="contact-form anim-right d1" id="contact-form" onsubmit="handleFormSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" name="from_name" placeholder="Rahul Sharma" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" placeholder="+91 98765 43210" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="reply_to" placeholder="rahul@example.com" required />
+                </div>
+                <div class="form-group">
+                    <label>Service Required</label>
+                    <select name="service" required>
+                        <option value="" disabled selected>Select a service...</option>
+                        <option>Wedding Photography</option>
+                        <option>Pre-Wedding Shoot</option>
+                        <option>Fashion & Model</option>
+                        <option>Product Photography</option>
+                        <option>Engagement Session</option>
+                        <option>Lifestyle Portrait</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Event Date</label>
+                        <input type="date" name="event_date" />
+                    </div>
+                    <div class="form-group">
+                        <label>Budget Range</label>
+                        <select name="budget">
+                            <option value="" disabled selected>Select budget...</option>
+                            <option>Under ₹10,000</option>
+                            <option>₹10,000 – ₹25,000</option>
+                            <option>₹25,000 – ₹50,000</option>
+                            <option>₹50,000+</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Your Message</label>
+                    <textarea name="message" placeholder="Tell me about your event, location preferences, or any special requirements..." rows="4" required></textarea>
+                </div>
+                <button type="submit" class="contact-submit-btn">
+                    <span>Send Message</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/>
+                    </svg>
+                </button>
+                <div class="form-success" id="formSuccess">
+                    ✅ Thank you! I'll reach out to you within 24 hours.
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/917821096438?text=Hi!%20I%27m%20interested%20in%20booking%20a%20photography%20session." 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="white">
+        <path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.74 5.478 2.024 7.784L0 32l8.408-2.008A15.936 15.936 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.568 0-5.08-.724-7.296-2.088l-.52-.304-5.392 1.288 1.288-5.392-.304-.52A13.255 13.255 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.28-9.947c-.4-.2-2.36-1.164-2.724-1.296-.364-.132-.628-.2-.892.2-.264.4-1.02 1.296-1.252 1.56-.232.264-.464.296-.864.096-.4-.2-1.688-.624-3.216-1.988-1.188-1.06-1.992-2.368-2.224-2.768-.232-.4-.024-.616.176-.816.18-.18.4-.464.6-.696.2-.232.264-.4.396-.664.132-.264.066-.496-.034-.696-.1-.2-.892-2.148-1.224-2.94-.324-.772-.652-.668-.892-.68-.232-.012-.496-.016-.76-.016s-.692.096-1.056.496c-.364.4-1.392 1.36-1.392 3.316s1.424 3.848 1.624 4.112c.2.264 2.812 4.296 6.812 6.024.952.412 1.696.656 2.276.84.956.304 1.824.26 2.512.156.768-.116 2.36-.964 2.692-1.896.332-.932.332-1.732.232-1.896-.1-.164-.364-.264-.764-.464z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+</a>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            
+            <!-- Column 1: Brand -->
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">📸 LENS</div>
+                <p class="footer-tagline">Crafting cinematic wedding films and timeless photography that capture your love story forever.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram" title="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" title="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube" title="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+                    </a>
+                    <a href="https://wa.me/917821096438" aria-label="WhatsApp" title="WhatsApp">
+                        <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.74 5.478 2.024 7.784L0 32l8.408-2.008A15.936 15.936 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.568 0-5.08-.724-7.296-2.088l-.52-.304-5.392 1.288 1.288-5.392-.304-.52A13.255 13.255 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h3 class="footer-col-title">Quick Links</h3>
+                <ul class="footer-nav-links">
+                    <li><a href="#">› Home</a></li>
+                    <li><a href="#about">› About Us</a></li>
+                    <li><a href="#services">› Services</a></li>
+                    <li><a href="#Gallery">› Gallery</a></li>
+                    <li><a href="#reviews">› Reviews</a></li>
+                    <li><a href="#contact">› Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Our Services -->
+            <div class="footer-col">
+                <h3 class="footer-col-title">Our Services</h3>
+                <ul class="footer-nav-links">
+                    <li><a href="#services">📸 Wedding Photography</a></li>
+                    <li><a href="#services">💛 Pre-Wedding Shoots</a></li>
+                    <li><a href="#services">🎥 Cinematic Films</a></li>
+                    <li><a href="#services">✨ Candid Photography</a></li>
+                    <li><a href="#services">🚁 Drone Photography</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Get In Touch -->
+            <div class="footer-col">
+                <h3 class="footer-col-title">Get In Touch</h3>
+                <ul class="footer-contact-list">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.35 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.29 6.29l.82-.82a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>+91 9960876119</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="462f28202906352e33242e2b2f2a2728202f2a2b356825292b">[email&#160;protected]</a></span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Amravati, Maharashtra, India</span>
+                    </li>
+                </ul>
+                <a href="#contact" class="footer-book-btn">Book Now</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 LENS Films. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+// ===== GALLERY SETUP =====
+const filterBtns = document.querySelectorAll('.filter-btn');
+const allGalleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+const viewGalleryBtn = document.getElementById('viewGalleryBtn');
+const ITEMS_PER_PAGE = 6;
+let currentCategory = 'all';
+let visibleItems = [];
+let shownCount = 0;
+let currentLightboxIndex = 0;
+
+function applyVisibility() {
+    // Filter items by category
+    visibleItems = allGalleryItems.filter(item =>
+        currentCategory === 'all' || item.getAttribute('data-category') === currentCategory
+    );
+
+    // Hide all first
+    allGalleryItems.forEach(item => {
+        item.style.display = 'none';
+        item.style.opacity = '0';
+        item.style.transform = 'scale(0.8)';
+    });
+
+    // Show only up to shownCount
+    const toShow = visibleItems.slice(0, shownCount);
+    toShow.forEach((item, i) => {
+        item.style.display = 'block';
+        setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+        }, i * 50);
+    });
+
+    // Update button
+    const remaining = visibleItems.length - shownCount;
+    if (remaining <= 0) {
+        viewGalleryBtn.style.display = shownCount > ITEMS_PER_PAGE ? 'inline-block' : 'none';
+        viewGalleryBtn.textContent = 'Show Less';
+        viewGalleryBtn.dataset.mode = 'less';
+    } else {
+        viewGalleryBtn.style.display = 'inline-block';
+        viewGalleryBtn.textContent = 'View More (' + remaining + ' Photos)';
+        viewGalleryBtn.dataset.mode = 'more';
+    }
+}
+
+function resetGallery() {
+    shownCount = ITEMS_PER_PAGE;
+    applyVisibility();
+}
+
+resetGallery();
+
+// ===== FILTER BUTTONS =====
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCategory = btn.getAttribute('data-category');
+        resetGallery();
+    });
+});
+
+// ===== VIEW MORE / SHOW LESS BUTTON =====
+viewGalleryBtn.addEventListener('click', () => {
+    if (viewGalleryBtn.dataset.mode === 'less') {
+        // Show Less - go back to first 6
+        shownCount = ITEMS_PER_PAGE;
+        applyVisibility();
+        document.getElementById('Gallery').scrollIntoView({ behavior: 'smooth' });
+    } else {
+        // Load 6 more
+        shownCount += ITEMS_PER_PAGE;
+        applyVisibility();
+    }
+});
+
+// ===== LIGHTBOX =====
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxTitle = document.getElementById('lightboxTitle');
+const lightboxDesc = document.getElementById('lightboxDesc');
+const lightboxClose = document.querySelector('.lightbox-close');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+const lightboxCounter = document.getElementById('lightboxCounter');
+
+function openLightbox(index) {
+    const item = visibleItems[index];
+    if (!item) return;
+    const img = item.querySelector('img');
+    const title = item.querySelector('h3');
+    const desc = item.querySelector('p');
+    lightboxImg.style.opacity = '0';
+    setTimeout(() => {
+        lightboxImg.src = img ? img.src : '';
+        lightboxTitle.textContent = title ? title.textContent : '';
+        lightboxDesc.textContent = desc ? desc.textContent : '';
+        lightboxCounter.textContent = (index + 1) + ' / ' + visibleItems.length;
+        lightboxImg.style.opacity = '1';
+    }, 150);
+    currentLightboxIndex = index;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+allGalleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const idx = visibleItems.indexOf(item);
+        if (idx === -1) return;
+        openLightbox(idx);
+    });
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+
+lightboxPrev.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentLightboxIndex = (currentLightboxIndex - 1 + visibleItems.length) % visibleItems.length;
+    openLightbox(currentLightboxIndex);
+});
+
+lightboxNext.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentLightboxIndex = (currentLightboxIndex + 1) % visibleItems.length;
+    openLightbox(currentLightboxIndex);
+});
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') { currentLightboxIndex = (currentLightboxIndex - 1 + visibleItems.length) % visibleItems.length; openLightbox(currentLightboxIndex); }
+    if (e.key === 'ArrowRight') { currentLightboxIndex = (currentLightboxIndex + 1) % visibleItems.length; openLightbox(currentLightboxIndex); }
+});
+
+// ===== ABOUT SCROLL ANIMATIONS =====
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('show');
+    });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.anim, .anim-left, .anim-right').forEach(el => observer.observe(el));
+
+// ===== EMAILJS INIT =====
+emailjs.init("6OVUZDjUUg6ayAft1");
+
+// ===== CONTACT FORM SUBMIT =====
+function handleFormSubmit(e) {
+    e.preventDefault();
+
+    const form = document.getElementById('contact-form');
+    const btn  = form.querySelector('.contact-submit-btn');
+    const successBox = document.getElementById('formSuccess');
+
+    // Loading state
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+    btn.querySelector('span').textContent = 'Sending...';
+    successBox.className = 'form-success';
+    successBox.textContent = '';
+
+    // Send email via EmailJS
+    emailjs.sendForm('service_d7l59yw', 'template_l5hfjv1', form)
+        .then(() => {
+            // ✅ SUCCESS
+            successBox.textContent = '✅ Message sent! I will reach out within 24 hours.';
+            successBox.style.color = '#4caf50';
+            successBox.classList.add('visible');
+            form.reset();
+        })
+        .catch((err) => {
+            // ❌ ERROR
+            successBox.textContent = '❌ Something went wrong. Please try again or contact directly.';
+            successBox.style.color = '#f44336';
+            successBox.classList.add('visible');
+            console.error('EmailJS error:', err);
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.style.opacity = '1';
+            btn.querySelector('span').textContent = 'Send Message';
+        });
+}
+
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CUSTOM CURSOR ANIMATION
+// ═══════════════════════════════════════════════════════════════════════════
+
+const cursor = document.createElement('div');
+cursor.className = 'custom-cursor';
+document.body.appendChild(cursor);
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+// ═══════════════════════════════════════════════════════════════════════════
+// HERO STATS COUNTER ANIMATION
+// ═══════════════════════════════════════════════════════════════════════════
+
+const statNumbers = document.querySelectorAll('.stat-number');
+statNumbers.forEach(stat => {
+    const target = parseInt(stat.textContent);
+    let current = 0;
+    const increment = target / 100;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            stat.textContent = target + '+';
+            clearInterval(timer);
+        } else {
+            stat.textContent = Math.floor(current);
+        }
+    }, 20);
+});
+
+// ═══════════════════════════════════════════════════════════════════════════
+// HAMBURGER MENU TOGGLE
+// ═══════════════════════════════════════════════════════════════════════════
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// REVIEW SLIDER - AUTO CHANGE EVERY 2 SECONDS
+// ═══════════════════════════════════════════════════════════════════════════
+
+
+const reviewCards = document.querySelectorAll('.review-card');
+const sliderDots = document.getElementById('sliderDots');
+let currentReview = 0;
+let reviewInterval;
+
+if (reviewCards.length > 0) {
+    // Create dots
+    reviewCards.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.className = 'dot' + (index === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goToReview(index));
+        sliderDots.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.slider-dots .dot');
+
+    function goToReview(index) {
+        reviewCards[currentReview].classList.remove('active');
+        dots[currentReview].classList.remove('active');
+        
+        currentReview = index;
+        
+        reviewCards[currentReview].classList.add('active');
+        dots[currentReview].classList.add('active');
+    }
+
+    function nextReview() {
+        const next = (currentReview + 1) % reviewCards.length;
+        goToReview(next);
+    }
+
+    // Auto-slide every 2 seconds
+    function startAutoSlide() {
+        reviewInterval = setInterval(nextReview, 2000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(reviewInterval);
+    }
+
+    // Start auto-slide
+    startAutoSlide();
+
+    // Pause on hover
+    const slider = document.querySelector('.review-slider-wrapper');
+    if (slider) {
+        slider.addEventListener('mouseenter', stopAutoSlide);
+        slider.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    // Manual dot click stops auto-slide temporarily
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            stopAutoSlide();
+            setTimeout(startAutoSlide, 5000);
+        });
+    });
+}
+
+</script>
+</body>
+</html>
